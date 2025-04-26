@@ -126,24 +126,3 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('language-button').addEventListener('click', toggleLanguage);
     updateText(); // Обновляем текст при загрузке страницы
 });
-
-const createLeaf = () => {
-    const leaf = document.createElement('div');
-    leaf.classList.add('leaf');
-    
-    const randomX = Math.random() * window.innerWidth; // Случайная позиция по X
-    const randomDuration = Math.random() * 5 + 3; // Случайная продолжительность анимации
-
-    leaf.style.left = `${randomX}px`;
-    leaf.style.animationDuration = `${randomDuration}s`;
-
-    document.body.appendChild(leaf);
-
-    // Удаляем лист после завершения анимации
-    leaf.addEventListener('animationend', () => {
-        leaf.remove();
-    });
-}
-
-// Создаем листья каждые 500 мс
-setInterval(createLeaf, 500);
