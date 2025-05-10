@@ -341,14 +341,3 @@ section:hover {
     transform: scale(1.01); /* Увеличение блока на 5% при наведении */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Увеличение тени при наведении */
 }
-
-body {
-    font-family: 'Verdana', sans-serif;
-    background-color: #f0f0f0;
-    color: #444;
-    margin: 0;
-    padding: 20px;
-    line-height: 1.6;
-    transition: background-color 0.3s;
-    overflow: hidden; /* Убираем скролл при анимации листьев */
-}
