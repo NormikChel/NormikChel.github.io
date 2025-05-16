@@ -89,7 +89,6 @@ function updateText() {
     const reviewsSection = document.querySelector('#reviews');
     reviewsSection.querySelector('h2').innerText = translations[currentLanguage].reviewsTitle;
     const reviewBlocks = reviewsSection.querySelectorAll('blockquote');
-       const reviewBlocks = reviewsSection.querySelectorAll('blockquote');
     reviewBlocks[0].querySelector('p').innerText = translations[currentLanguage].review1;
     reviewBlocks[1].querySelector('p').innerText = translations[currentLanguage].review2;
 }
@@ -100,4 +99,3 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('theme-button').addEventListener('click', toggleTheme);
     updateText(); // Обновляем текст при загрузке страницы
 });
-
