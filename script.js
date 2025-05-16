@@ -125,4 +125,4 @@ function updateText() {
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('language-button').addEventListener('click', toggleLanguage);
     updateText(); // Обновляем текст при загрузке страницы
-});
+})
