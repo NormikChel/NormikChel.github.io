@@ -1,3 +1,5 @@
+ script.js
+
 // Функция для переключения темы (светлая/темная)
 function toggleTheme() {
     const body = document.body;
@@ -11,6 +13,21 @@ function toggleTheme() {
     }
 }
 
+// Функция для отображения уведомлений
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.innerText = message;
+
+    // Добавление уведомления на страницу
+    document.body.appendChild(notification);
+
+    // Удаление уведомления через 3 секунды
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
+}
+
 // Восстановление темы из localStorage при загрузке страницы
 window.onload = () => {
     const savedTheme = localStorage.getItem('theme');
@@ -18,6 +35,17 @@ window.onload = () => {
         document.body.classList.add('dark-theme');
     }
 };
+
+// Пример использования функций
+document.addEventListener('DOMContentLoaded', () => {
+    const themeButton = document.getElementById('theme-button');
+    if (themeButton) {
+        themeButton.addEventListener('click', toggleTheme);
+    }
+
+    // Пример уведомления
+    showNotification('Добро пожаловать на сайт!');
+});
 
 // Объект с переводами
 const translations = {
@@ -58,7 +86,7 @@ const translations = {
 };
 
 // Переменная для хранения текущего языка
-let currentLanguage = 'ru'; // Начальный язык
+let currentLanguage = 'ru';
 
 // Функция для переключения языка
 function toggleLanguage() {
@@ -83,7 +111,7 @@ function updateText() {
     });
 
     document.querySelector('#download h2').innerText = translations[currentLanguage].downloadTitle;
-    document.querySelector('#download p').innerHTML = translations[currentLanguage].downloadText + 
+    document.querySelector('#download p').innerText = translations[currentLanguage].downloadText + 
         '<a href="https://www.minecraft.net" target="_blank">minecraft.net</a>';
 
     const reviewsSection = document.querySelector('#reviews');
@@ -93,9 +121,8 @@ function updateText() {
     reviewBlocks[1].querySelector('p').innerText = translations[currentLanguage].review2;
 }
 
-// Добавляем обработчик события для кнопок
+// Добавляем обработчик события для кнопки
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('language-button').addEventListener('click', toggleLanguage);
-    document.getElementById('theme-button').addEventListener('click', toggleTheme);
     updateText(); // Обновляем текст при загрузке страницы
 });
