@@ -24,7 +24,7 @@ const translations = {
     en: {
         title: "Welcome to the World of Minecraft!",
         aboutTitle: "About the Game",
-        aboutText: "Minecraft is a wonderful sandbox game where you can build, explore, and survive in an endless world. Create your own adventures and share them with friends!",
+        aboutText: "Minecraft is a wonderful sandbox game where you can build, explore, and survive in an endless world. Create your own adventures and share them with friends! Unfortunately, in this thriving game, there are also 'BUTs' that you can learn about on the Internet.",
         featuresTitle: "Features",
         featuresList: [
             "Open world for exploration",
@@ -36,12 +36,12 @@ const translations = {
         downloadText: "You can download Minecraft from the official website: ",
         reviewsTitle: "Reviews",
         review1: "\"Minecraft is an incredible game! I love building and exploring new worlds!\" - Alien",
-        review2: "\"The best pastime with friends!\" - @fan_domer08"
+        review2: "\"The best pastime with friends. Every time new adventures, especially on donation dumps like FunTime and ReallyWorld! Definitely 1✪\" - @fan_domer08"
     },
     ru: {
         title: "Добро пожаловать в мир Minecraft!",
         aboutTitle: "О игре",
-        aboutText: "Minecraft — это замечательная игра в жанре песочница, где вы можете строить, исследовать и выживать в бесконечном мире.",
+        aboutText: "Minecraft — это замечательная игра в жанре песочница, где вы можете строить, исследовать и выживать в бесконечном мире. Создавайте свои собственные приключения и делитесь ими с друзьями! К сожалению, в этой процветающей игре есть и «НО», которые можно узнать в Internet'е.",
         featuresTitle: "Особенности",
         featuresList: [
             "Открытый мир для исследования",
@@ -52,13 +52,13 @@ const translations = {
         downloadTitle: "Скачать Minecraft",
         downloadText: "Вы можете скачать Minecraft с официального сайта: ",
         reviewsTitle: "Отзывы",
-        review1: "\"Minecraft — это невероятная игра!\" - Пришелец",
-        review2: "\"Лучшее времяпрепровождение с друзьями!\" - @fan_domer08"
+        review1: "\"Minecraft — это невероятная игра! Я люблю строить и исследовать новые миры!\" - Пришелец",
+        review2: "\"Лучшее времяпрепровождение с друзьями. Каждый раз новые приключения, особенно на донатных помойках, по типу FunTime и ReallyWorld! Однозначно 1✪\" - @fan_domer08"
     }
 };
 
 // Переменная для хранения текущего языка
-let currentLanguage = 'ru';
+let currentLanguage = 'ru'; // Начальный язык
 
 // Функция для переключения языка
 function toggleLanguage() {
@@ -89,12 +89,15 @@ function updateText() {
     const reviewsSection = document.querySelector('#reviews');
     reviewsSection.querySelector('h2').innerText = translations[currentLanguage].reviewsTitle;
     const reviewBlocks = reviewsSection.querySelectorAll('blockquote');
+       const reviewBlocks = reviewsSection.querySelectorAll('blockquote');
     reviewBlocks[0].querySelector('p').innerText = translations[currentLanguage].review1;
     reviewBlocks[1].querySelector('p').innerText = translations[currentLanguage].review2;
 }
 
-// Добавляем обработчик события для кнопки
+// Добавляем обработчик события для кнопок
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('language-button').addEventListener('click', toggleLanguage);
+    document.getElementById('theme-button').addEventListener('click', toggleTheme);
     updateText(); // Обновляем текст при загрузке страницы
 });
+
