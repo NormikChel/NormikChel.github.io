@@ -1,0 +1,3 @@
+User-agent: *
+Host: normikchel.github.io
+Sitemap: https://normikchel.github.io/sitemap.xml
