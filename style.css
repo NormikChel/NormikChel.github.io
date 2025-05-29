@@ -232,9 +232,20 @@ body.dark-theme .notification {
 }
 #language-button:hover {
     color: #007bff;
-    transform: scale(1.1); /* Увеличение кнопки при наведении */
+    transform: scale(1.5); /* Увеличение кнопки при наведении */
 }
 section:hover {
-    transform: scale(1.01); /* Увеличение блока на 1% при наведении */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Увеличение тени при наведении */
+    transform: scale(1.02); /* Увеличение блока на 1% при наведении */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Увеличение тени при наведении */
+}
+
+/* Пример стилей для светлой темы */
+.light-theme {
+    background-color: #f0f0f0; /* Цвет фона */
+    color: #444; /* Цвет текста */
+}
+/* Пример стилей для темной темы */
+.dark-theme {
+    background-color: #121212; /* Цвет фона */
+    color: #ffffff; /* Цвет текста */
 }
