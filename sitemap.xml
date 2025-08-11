@@ -1,43 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<urlset
+  <!-- Главная страница -->
+  <url>
+    <loc>https://normikchel.github.io/</loc>
+    <lastmod>2025-08-11</lastmod>  <!-- Актуальная дата -->
+    <changefreq>daily</changefreq>  <!-- Частота изменений -->
+    <priority>1.0</priority>
+    <!-- Для Open Graph изображения -->
+    <image:image>
+      <image:loc>https://normikchel.github.io/og-image.jpg</image:loc>
+      <image:title>NormikChel - Главная страница</image:title>
+    </image:image>
+  </url>
 
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-
-
-
-<url>
-
-  <loc>https://normikchel.github.io/</loc>
-
-  <lastmod>2025-07-01T14:14:30+00:00</lastmod>
-
-  <priority>1.00</priority>
-
-</url>
-
-<url>
-
-  <loc>https://normikchel.github.io/en</loc>
-
-  <lastmod>2025-07-01T14:14:30+00:00</lastmod>
-
-  <priority>0.80</priority>
-
-</url>
-
-
-
-
-
-</urlset>
+  <!-- Английская версия -->
+  <url>
+    <loc>https://normikchel.github.io/en</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Добавьте hreflang для мультиязычности -->
+    <xhtml:link 
+        rel="alternate"
+        hreflang="ru"
+        href="https://normikchel.github.io/"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+  </url>
