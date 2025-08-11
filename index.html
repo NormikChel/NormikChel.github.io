@@ -55,6 +55,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 
+<script>
+    // Проверяем прохождение капчи
+    const isCaptchaPassed = localStorage.getItem('captcha_passed') === 'true';
+    
+    // Проверяем срок действия (24 часа)
+    if(isCaptchaPassed) {
+        const sessionDuration = 24 * 60 * 60 * 1000; // 24 часа в мс
+        const passTime = parseInt(localStorage.getItem('captcha_timestamp'));
+        
+        // Если сессия активна - пропускаем
+        if(Date.now() - passTime < sessionDuration) {
+            // Разрешаем доступ
+        } 
+        // Если сессия истекла - показываем капчу
+        else {
+            window.location.href = "captcha-wall.html";
+        }
+    }
+    // Если не проходил капчу - перенаправляем
+    else {
+        window.location.href = "captcha-wall.html";
+    }
+</script>
+
 <header>
   <button id="theme-button" style="position: absolute; top: 20px; right: 20px; background: none; border: none; cursor: pointer; font-size: 24px;">
             <i class="fas fa-moon"></i>
