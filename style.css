@@ -262,3 +262,10 @@ section:hover {
     background-color: #121212; /* Цвет фона */
     color: #ffffff; /* Цвет текста */
 }
+
+@font-face {
+    font-family: 'Verdana';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
