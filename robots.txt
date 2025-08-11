@@ -1,9 +1,11 @@
 User-agent: *
-Crawl-delay: 1
+Crawl-delay: 3
+Allow: /$
+Disallow: /yandex_43a39699a5f53f7c
+Disallow: /googlee5d8d673778c47e8
+
+User-agent: Yandex
+Crawl-delay: 2
 Host: normikchel.github.io
-Disallow: /kg.html
-Disallow: /kz.html
-Disallow: /en.html
-Disallow: /yandex_43a39699a5f53f7c.html
-Disallow: /googlee5d8d673778c47e8.html
+
 Sitemap: https://normikchel.github.io/sitemap.xml
