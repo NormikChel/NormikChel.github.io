@@ -1,6 +1,5 @@
 User-agent: *
 Crawl-delay: 3
-Allow: /$
 Disallow: /yandex_43a39699a5f53f7c
 Disallow: /googlee5d8d673778c47e8
 
