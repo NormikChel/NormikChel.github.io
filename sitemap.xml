@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
@@ -17,13 +18,11 @@
   </url>
 
   <url>
-    <loc>https://normikchel.github.io/en</loc>
+    <loc>https://normikchel.github.io/en/</loc>
     <lastmod>2025-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link 
-        rel="alternate"
-        hreflang="ru"
-        href="https://normikchel.github.io/"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://normikchel.github.io/" />
   </url>
+
+</urlset>
