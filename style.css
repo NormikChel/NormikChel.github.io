@@ -269,3 +269,11 @@ section:hover {
     font-style: normal;
     font-display: swap;
 }
+
+.bsky-icon {
+  width: 40px;   /* Задаем ширину */
+  height: 40px;  /* Задаем высоту */
+  /* Дополнительные стили (опционально) */
+  border: none;  /* Убираем границу у картинки-ссылки */
+  display: block; /* Меняем тип отображения при необходимости */
+}
