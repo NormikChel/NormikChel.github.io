@@ -277,8 +277,3 @@ section:hover {
   border: none;  /* Убираем границу у картинки-ссылки */
   display: block; /* Меняем тип отображения при необходимости */
 }
-
-a[href="https://bsky.app/profile/normikchel.github.io"]:hover img {
-    transform: scale(1.5);
-    transition: transform 0.3s ease;
-}
